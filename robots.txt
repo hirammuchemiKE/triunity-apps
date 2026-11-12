@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://hirammuchemike.github.io/triunity-apps/sitemap.xml
+Sitemap: https://triunityapps.com/sitemap.xml

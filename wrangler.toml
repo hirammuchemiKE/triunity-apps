@@ -1,0 +1,6 @@
+name = "triunity-apps"
+compatibility_date = "2026-11-12"
+
+# Static site: the repo root is the site. No build step.
+[assets]
+directory = "."
