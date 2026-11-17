@@ -39,6 +39,19 @@ li b{color:#EEF0F4}
 .card p{margin:0;color:#A3ABBB;font-size:15px}
 footer{margin-top:40px;border-top:1px solid #24314f;padding-top:16px;color:#A3ABBB;font-size:14px}
 @media(max-width:520px){h1{font-size:24px}.shots img{height:280px}}</style>
+<!-- Meta pixel 1837847627509335 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1837847627509335');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1837847627509335&ev=PageView&noscript=1"/></noscript>
+<!-- end Meta pixel -->
 </head>
 <body><div class="wrap">
 <header class="app">
@@ -64,4 +77,13 @@ footer{margin-top:40px;border-top:1px solid #24314f;padding-top:16px;color:#A3AB
 <h2>Also by Triunity</h2>
 <div class="cards"><a class="card" href="../tinnitus/"><img src="../tinnitus/icon.png" alt=""><h3>Tinnitus Relief</h3><p>Find a sound that sits under your ringing, and leave it playing all night.</p></a><a class="card" href="../liminara/"><img src="../liminara/icon.png" alt=""><h3>Liminara</h3><p>Lucid dreaming, a private dream journal and remote viewing practice.</p></a><a class="card" href="../grounded/"><img src="../grounded/icon.png" alt=""><h3>Grounded</h3><p>Grounding techniques, box breathing and 4-7-8 — a little every day.</p></a></div>
 <footer>Made by Triunity Engineering Limited, Nairobi. Android apps, paid for once, built to keep your data on your phone.</footer>
-</div></body></html>
+</div><script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a) return;
+  var p = new URLSearchParams(a.href.split('?')[1] || '');
+  var app = (p.get('id') || 'unknown').replace(/^com\./, '');
+  if (window.fbq) fbq('trackCustom', 'PlayStoreClick', {app: app});
+}, true);
+</script>
+</body></html>

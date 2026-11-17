@@ -28,11 +28,33 @@ li b{color:#EEF0F4}
 .card h3{margin:10px 0 4px;font-size:19px}
 .card p{margin:0;color:#A3ABBB;font-size:15px}
 footer{margin-top:40px;border-top:1px solid #24314f;padding-top:16px;color:#A3ABBB;font-size:14px}
-@media(max-width:520px){h1{font-size:24px}.shots img{height:280px}}</style></head>
+@media(max-width:520px){h1{font-size:24px}.shots img{height:280px}}</style><!-- Meta pixel 1837847627509335 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1837847627509335');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1837847627509335&ev=PageView&noscript=1"/></noscript>
+<!-- end Meta pixel -->
+</head>
 <body><div class="wrap">
 <h1>Triunity apps</h1>
 <p class="tag">Four Android apps. Free to try, one payment, no subscription, and your data stays on your phone.</p>
 <div class="cards"><a class="card" href="tinnitus/"><img src="assets/tinnitus.png" alt=""><h3>Tinnitus Relief</h3><p>Find a sound that sits under your ringing, and leave it playing all night.</p></a><a class="card" href="hypnara/"><img src="assets/hypnara.png" alt=""><h3>Hypnara</h3><p>Self hypnosis and affirmations in your own voice.</p></a><a class="card" href="liminara/"><img src="assets/liminara.png" alt=""><h3>Liminara</h3><p>Lucid dreaming, a private dream journal and remote viewing practice.</p></a><a class="card" href="grounded/"><img src="assets/grounded.png" alt=""><h3>Grounded</h3><p>Grounding techniques, box breathing and 4-7-8 — a little every day.</p></a></div>
 <div class="cards"><a class="card" href="https://maintainapp.pro"><img src="assets/mina.png" alt=""><h3>MaintainApp</h3><p>CMMS for teams: work orders, preventive maintenance and asset tracking. <span class="muted">maintainapp.pro</span></p></a></div>
 <footer>Triunity Engineering Limited, Nairobi · <a href="mailto:triunityworks@gmail.com">triunityworks@gmail.com</a></footer>
-</div></body></html>
+</div><script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a) return;
+  var p = new URLSearchParams(a.href.split('?')[1] || '');
+  var app = (p.get('id') || 'unknown').replace(/^com\./, '');
+  if (window.fbq) fbq('trackCustom', 'PlayStoreClick', {app: app});
+}, true);
+</script>
+</body></html>
