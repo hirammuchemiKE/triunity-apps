@@ -86,4 +86,40 @@ document.addEventListener('click', function (e) {
   if (window.fbq) fbq('trackCustom', 'PlayStoreClick', {app: app});
 }, true);
 </script>
+<script>
+/* iOS notice: these apps are Android-only, so do not hand an iPhone a Play link. */
+(function () {
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (!isIOS) return;
+  function apply() {
+    var links = document.querySelectorAll('a[href*="play.google.com"]');
+    if (!links.length) return;
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      a.removeAttribute('href');
+      a.setAttribute('role', 'text');
+      a.style.background = '#16203a';
+      a.style.color = '#A3ABBB';
+      a.style.cursor = 'default';
+      a.textContent = 'Android only';
+    }
+    if (document.getElementById('ios-note')) return;
+    var n = document.createElement('p');
+    n.id = 'ios-note';
+    n.style.cssText = 'border-left:3px solid #24314f;padding:8px 0 8px 14px;margin:14px 0 0;' +
+      'color:#A3ABBB;font-size:15px';
+    n.textContent = 'Grounded runs on Android. There is no iPhone or iPad version yet, ' +
+      'so there is nothing to install on this device.';
+    var host = links[0].parentNode;
+    host.parentNode.insertBefore(n, host.nextSibling);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+})();
+</script>
 </body></html>
